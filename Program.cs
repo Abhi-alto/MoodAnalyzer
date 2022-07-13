@@ -1,4 +1,5 @@
-﻿using MoodAnalyzer;
+﻿
+using MoodAnalyzer;
 Console.WriteLine("Welcome to the mood analyzer");
-moodAnalyzer obj = new moodAnalyzer();
-Console.WriteLine(obj.AnalyzeMood("I am in a Sad mood"));
+moodAnalyzer obj = new moodAnalyzer("I am sad today");
+Console.WriteLine(obj.AnalyzeMood());

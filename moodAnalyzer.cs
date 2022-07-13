@@ -8,9 +8,18 @@ namespace MoodAnalyzer
 {
     public class moodAnalyzer
     {
-        public string AnalyzeMood(String mood)
+        public string Msg;
+        public moodAnalyzer()                           //Default constructor(empty)
         {
-            if (find(mood))
+
+        }
+        public moodAnalyzer(String Msg)                 //parameterized constructor
+        {
+            this.Msg = Msg;
+        }
+        public string AnalyzeMood()
+        {
+            if (find(Msg))
             {
                 return "happy";
             }
@@ -19,13 +28,13 @@ namespace MoodAnalyzer
                 return "sad";
             }
         }
-        public bool find(string findMood)
+        public bool find(string findMood)                   //segregating all the string and checking for the sad word
         {
             string[] ar = findMood.Split(' ');
             for (int x = 0; x < ar.Length; x++)
             {
                 Console.WriteLine(ar[x]);
-                ar[x]=ar[x].ToLower();
+                ar[x] = ar[x].ToLower();
                 Console.WriteLine(ar[x]);
                 if (ar[x].Equals("sad"))
                 {
@@ -37,4 +46,5 @@ namespace MoodAnalyzer
 
     }
 }
+
 
